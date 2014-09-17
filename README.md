@@ -1,8 +1,6 @@
 ## Polaris - inertial navigation system
 
-[Polaris](http://github.com/dronedynamics/polaris/) is open-source inertial nagivation software (INS) for fixed-wing aircraft. It provides realtime estimates to allow for higher-level navigation software to be developed.
-
-For installation instructions (you _will_ need to follow these if you want to get it working), more details and screenshots go to [http://dronedynamics.com/polaris/](http://dronedynamics.com/polaris/).
+[Polaris](http://github.com/timtrueman/polaris/) is open-source inertial nagivation software (INS) for fixed-wing aircraft. It provides realtime estimates to allow for higher-level navigation software to be developed.
 
 ## Basics
 
@@ -46,25 +44,18 @@ More to come in this section…
 9. Port to other platforms
 10. Email Austin Meyer (X-Plane) and see if he's willing to include raw magnetometer values
 11. Once all the algorithms are verified (including a write-up on the testing perhaps), introduce sensor noise
-12. Your idea here ✈ [tim@dronedynamics.com](mailto:tim@dronedynamics.com)
 
 ## Issues
 
 Have a bug or feature request? Please create an issue here on GitHub!
 
-https://github.com/dronedynamics/polaris/issues
+https://github.com/timtrueman/polaris/issues
 
 ## Authors
 
 **Ryan Beall**
 
 **Tim Trueman**
-
-+ http://twitter.com/timtrueman
-+ http://timtrueman.com/
-+ http://github.com/timtrueman
-
-**Add your name above this line if you send a pull request…**
 
 ## License
 
