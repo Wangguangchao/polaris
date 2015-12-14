@@ -32,7 +32,7 @@ def safe_get_ip_address():
         return "127.0.0.1"
 
 logging.config.fileConfig("logging.conf")
-logger = logging.getLogger("shumai")
+logger = logging.getLogger("polaris")
 
 display = Display()
 TD = TruthData()
@@ -49,8 +49,6 @@ UDP_PORT=49045 # was 49503
 UDP_SENDTO_PORT=49001
 
 """
-Please read the documentation on http://dronedynamics.com/shumai-the-extended-kalman-filter/
-
 Everything is based on http://contentdm.lib.byu.edu/ETD/image/etd1527.pdf which I will reference from here on out as ISEFMAV
 
 Handy things to know:
@@ -61,9 +59,9 @@ Handy things to know:
 - Remember almost everything is in radians.
 """
 
-class Shumai:
+class Polaris:
     """
-    Shumai [pronounced "Shoe-my"] is a six-degree-of-freedom extended Kalman filter for inertial navigation, and *requires* a 3-axis gyro, 3-axis accelerometer, a 3-axis magnetometer, an airspeed sensor, an altimeter and GPS. It is based on the work in this paper: http://contentdm.lib.byu.edu/ETD/image/etd1527.pdf
+    Polaris is a six-degree-of-freedom extended Kalman filter for inertial navigation, and *requires* a 3-axis gyro, 3-axis accelerometer, a 3-axis magnetometer, an airspeed sensor, an altimeter and GPS. It is based on the work in this paper: http://contentdm.lib.byu.edu/ETD/image/etd1527.pdf
     States tracked (or to be tracked):
         * Yaw, pitch, roll
         * Airspeed, ground speed
@@ -145,7 +143,7 @@ class XplaneListener(DatagramProtocol):
         # self.matlab_graphing_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         # self.matlab_graphing_sock.bind((safe_get_ip_address(),41862))
         self.last_time = datetime.now()
-        self.ekf = Shumai(self, self, self, self, self) # hack for X-Plane
+        self.ekf = Polaris(self, self, self, self, self) # hack for X-Plane
         self.bxyz = matrix("0.0 0.0 0.0; 0.0 0.0 0.0; 0.0 0.0 0.0")
         self.mxyz = matrix("25396.8; 2011.7; 38921.5") # some sort of magnetic field strength table in nanotesla units
         try:
