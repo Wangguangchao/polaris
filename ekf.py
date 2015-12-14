@@ -16,7 +16,7 @@ TD = TruthData()
 display = Display()
 
 logging.config.fileConfig("logging.conf")
-logger = logging.getLogger("shumai")
+logger = logging.getLogger("polaris")
 
 FOUT = csv.writer(open('data.csv', 'w'), delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
