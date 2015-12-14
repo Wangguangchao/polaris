@@ -6,7 +6,7 @@ from display import Display
 from utils import safe_tangent, wrap
 
 logging.config.fileConfig("logging.conf")
-logger = logging.getLogger("shumai")
+logger = logging.getLogger("polaris")
 
 display = Display()
 
