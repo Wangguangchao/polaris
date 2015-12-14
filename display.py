@@ -69,7 +69,7 @@ class Display(object):
     def display_state(self, precision):
         self.screen.erase()
         rows, cols = self.screen.getmaxyx()
-        self.screen.addstr(0, 0, "Shumai: the Extended Kalman Filter for aircraft")
+        self.screen.addstr(0, 0, "Polaris: Extended Kalman Filter for aircraft")
         i = 1
         x, y = 2, 0
         for category in sorted(self.categories.keys(), key=str.lower):
